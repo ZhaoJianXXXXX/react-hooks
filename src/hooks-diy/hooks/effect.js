@@ -35,12 +35,12 @@ const useEffectHandler = (effects, counter, effectFunc, inputs) => {
 	}
 }
 
-const useEffect = (effectFunc, inputs = []) => {
+const useEffect = (effectFunc, inputs) => {
 	const { component, counter } = useCounter();
 	useEffectHandler(component.__hooks__.effects, counter, effectFunc, inputs);
 }
 
-const useLayoutEffect = (effectFunc, inputs = []) => {
+const useLayoutEffect = (effectFunc, inputs) => {
 	const { component, counter } = useCounter();
 	useEffectHandler(component.__hooks__.layoutEffects, counter, effectFunc, inputs);
 }

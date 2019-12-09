@@ -15,4 +15,4 @@ const App = (Demo) => (
 	))
 )
 
-export default App(UseState);
+export default App(UseEffect);
