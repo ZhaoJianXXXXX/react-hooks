@@ -1,7 +1,12 @@
 # react-hooks
 react-hooks源码实现解析
 
-目前实现：useState useEffect
+目前实现：
+useState 
+useEffect
+useLayoutEffect
+useMemo
+useCallback
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
