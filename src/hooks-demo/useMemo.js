@@ -25,10 +25,6 @@ const UseMemo = withHooks(() => {
 	)
 });
 
-const Child = withHooks(({ expensive }) => {
-	return(
-		<p>expensive: { expensive }</p>
-	)
-})
+const Child = withHooks(({ expensive }) => (<p>expensive: { expensive }</p>))
 
 export { UseMemo }
