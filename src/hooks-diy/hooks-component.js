@@ -1,6 +1,7 @@
 import React from 'react';
 import { withContext } from './context';
 import { runEffects, cleanupEffects } from './hooks/effect';
+import { bindContexts } from './hooks/context';
 
 const withHooks = (func) => (
 	class extends React.Component{
@@ -12,10 +13,13 @@ const withHooks = (func) => (
 				effects: {},
 				layoutEffects: {},
 				memos: {},
-				contexts: {}
+				contexts: {},
 			}
-//			this.render = withContext(this, () => func(props));
-			this.render = withContext(this, () => func(this.props));
+//			this.render = withContext(this, () => func(this.props));
+			this.render = bindContexts(
+				this.__hooks__.contexts,
+				withContext(this, () => func(this.props))
+			);
 		}
 		componentWillMount(){
 			runEffects(this.__hooks__.layoutEffects);

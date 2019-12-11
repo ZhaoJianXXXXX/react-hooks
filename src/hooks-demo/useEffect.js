@@ -10,7 +10,7 @@ const UseEffect = withHooks(() => {
 	}, [count])
 
 	useEffect(() => {
-		console.info('挂载执行')
+		console.info('挂载执行');
 	}, [])
 
 	useEffect(() => {

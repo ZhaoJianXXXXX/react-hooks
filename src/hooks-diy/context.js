@@ -6,9 +6,9 @@ const useCounter = () => {
 	return { component: hookContext.component, counter };
 }
 
-const withContext = (component, func) => (...args) => {
+const withContext = (component, func) => () => {
 	hooksContextStack.push({ component, counter: 0 });
-	const result = func(...args);
+	const result = func();
 	hooksContextStack.pop();
 	return result;
 }

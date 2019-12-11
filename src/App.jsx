@@ -1,6 +1,6 @@
 import React from 'react';
 //import { useState, useEffect, useMemo, useCallback } from 'react';
-import { UseState, UseEffect, UseMemo, UseCallback } from './hooks-demo';
+import { UseState, UseEffect, UseMemo, UseCallback, UseContext } from './hooks-demo';
 import { withHooks } from './hooks-diy';
 import logo from './logo.svg';
 import './App.css';
@@ -15,4 +15,4 @@ const App = (Demo) => (
 	))
 )
 
-export default App(UseEffect);
+export default App(UseContext);
