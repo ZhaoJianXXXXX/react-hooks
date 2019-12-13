@@ -11,6 +11,10 @@ const UseEffect = withHooks(() => {
 
 	useEffect(() => {
 		console.info('挂载执行');
+//		let id = setInterval(() => {
+//		  setCount(_ => _ + 1);
+//		}, 1000);
+//		return () => clearInterval(id);
 	}, [])
 
 	useEffect(() => {

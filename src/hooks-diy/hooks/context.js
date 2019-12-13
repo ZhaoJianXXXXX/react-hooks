@@ -2,6 +2,7 @@ import React from 'react';
 import { useCounter } from '../context';
 
 const bindContexts = (contexts, renderFunc) => {
+	renderFunc();
 	const contextsArray = Object
 		.getOwnPropertyNames(contexts)
 		.map(_counter => {

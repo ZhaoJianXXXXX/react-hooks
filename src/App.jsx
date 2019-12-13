@@ -15,4 +15,4 @@ const App = (Demo) => (
 	))
 )
 
-export default App(UseContext);
+export default App(UseEffect);
